@@ -43,3 +43,43 @@ document.addEventListener("DOMContentLoaded", () => {
     setInterval(updateClock, 1000);
 
 });
+// Louis Miranda
+// IT & Cybersecurity Portfolio
+
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    console.log("Louis Miranda Portfolio");
+    console.log("System initialized.");
+
+
+    // Find the status element
+    const status = document.querySelector(".online");
+
+
+    // Typewriter status animation
+    if (status) {
+
+        const message =
+            "● SYSTEM ONLINE // PORTFOLIO IN DEVELOPMENT";
+
+        status.textContent = "";
+
+        let position = 0;
+
+        function typeStatus() {
+
+            if (position < message.length) {
+
+                status.textContent += message.charAt(position);
+
+                position++;
+
+                setTimeout(typeStatus, 40);
+            }
+        }
+
+        typeStatus();
+    }
+
+});
